@@ -1,5 +1,3 @@
-# Snake_Game_
-repositório do clássico jogo da cobrinha feito em C, para um projeto da disciplina Programação Imperativa e Funcional do César School de 2024.1.
 # Snake Game
 
 Bem-vindo ao Snake Game! Este é um clássico jogo da cobrinha desenvolvido em C usando a biblioteca `cli-lib` para manipulação de entrada do teclado, exibição na tela e temporização.
