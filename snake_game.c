@@ -111,9 +111,10 @@ void initGame(struct Game *game) {
 
     game->food = (struct Food *)malloc(sizeof(struct Food));
 
-
-    game->food->pos.x = rand() % (MAXX - 4) + 2; 
-    game->food->pos.y = rand() % (MAXY - 4) + 2; 
+    
+    int margin = 5;  
+    game->food->pos.x = rand() % (MAXX - 2 * margin) + margin; 
+    game->food->pos.y = rand() % (MAXY - 2 * margin) + margin; 
 
     game->score = 0;
     game->gameOver = 0;
@@ -192,8 +193,10 @@ void updateGame(struct Game *game) {
     if (newPos.x == game->food->pos.x && newPos.y == game->food->pos.y) {
         game->score++;
 
-        game->food->pos.x = rand() % (MAXX - 2) + 1;
-        game->food->pos.y = rand() % (MAXY - 2) + 1;
+        
+        int margin = 5; 
+        game->food->pos.x = rand() % (MAXX - 2 * margin) + margin; 
+        game->food->pos.y = rand() % (MAXY - 2 * margin) + margin; 
     } else {
         struct SnakeNode *current = game->snake->head;
         while (current->next->next != NULL) {
